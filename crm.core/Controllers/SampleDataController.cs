@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Mvc;
 namespace crm.core.Controllers
 {
 
+
+
     [Route("api/[controller]")]
     public class SampleDataController : Controller
     {
