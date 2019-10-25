@@ -20,6 +20,11 @@ namespace crm.core.Controllers
         [HttpGet("[action]")]
         public IEnumerable<WeatherForecast> WeatherForecasts()
         {
+            using (crm.db.Context s = new db.Context())
+            {
+
+            }
+
             var rng = new Random();
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {
