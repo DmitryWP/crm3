@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Runtime.Serialization;
 
 namespace crm.contracts
 {
@@ -6,6 +7,7 @@ namespace crm.contracts
     /// <summary>
     /// Садовый участок (информация)
     /// </summary>
+    [DataContract]
     public class PlotInfo
     {
         /// <summary>
@@ -59,6 +61,7 @@ namespace crm.contracts
     /// <summary>
     /// Садовый участок 
     /// </summary>
+    [DataContract]
     public class Plot : PlotInfo
     {
         /// <summary>
@@ -70,6 +73,7 @@ namespace crm.contracts
     /// <summary>
     /// Садовый участок (история)
     /// </summary>
+    [DataContract]
     public class PlotHistory : PlotInfo
     {
         /// <summary>
