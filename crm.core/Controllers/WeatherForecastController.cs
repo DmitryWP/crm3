@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using crm.contracts;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
@@ -29,7 +30,9 @@ namespace crm3.Controllers
             var rng = new Random();
             using(crm.db.Context db = new crm.db.Context())
             {
-                var a = db.GardenSocieties.FirstOrDefault();
+                crm.db.entities.GardenSociety a = db.GardenSocieties.FirstOrDefault();
+                GardenSociety aaa = System.Data.EntityHelper.CopyTo<GardenSociety>(a);
+
                 List<WeatherForecast> res = new List<WeatherForecast>();
                 foreach(var aa in db.GardenSocieties)
                 {
