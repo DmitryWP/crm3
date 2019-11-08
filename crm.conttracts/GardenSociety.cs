@@ -10,10 +10,10 @@ namespace crm.contracts
     public class GardenSocietyInfo
     {
         [DataMember]
-        public string Name { get; set; }
+        public string name { get; set; }
 
         [DataMember]
-        public bool Enabled { get; set; }
+        public bool enabled { get; set; }
     }
 
     /// <summary>
@@ -26,7 +26,7 @@ namespace crm.contracts
         /// Иденитификатор
         /// </summary>
         [DataMember]
-        public long Id { get; set; }
+        public long id { get; set; }
     }
 
     /// <summary>
@@ -39,36 +39,36 @@ namespace crm.contracts
         /// Идентификатор объекта
         /// </summary>
         [DataMember]
-        public long Id { get; set; }
+        public long id { get; set; }
 
         /// <summary>
         /// Идентификатор объекта истории
         /// </summary>
         [DataMember]
-        public long HistoryId { get; set; }
+        public long historyId { get; set; }
 
         /// <summary>
         /// Идентификатор пользователя, отвественного за историю
         /// </summary>
         [DataMember]
-        public long ChangedUserId { get; set; }
+        public long changedUserId { get; set; }
 
         /// <summary>
         /// Дата изменения
         /// </summary>
         [DataMember]
-        public DateTime Changed { get; set; }
+        public DateTime changed { get; set; }
 
         /// <summary>
         /// Признак удаления
         /// </summary>
         [DataMember]
-        public bool? Deleted { get; set; }
+        public bool? deleted { get; set; }
 
         /// <summary>
         /// Сырые данные истриии
         /// </summary>
         [DataMember]
-        public string RowData { get; set; }
+        public string rowData { get; set; }
     }
 }

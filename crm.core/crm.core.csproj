@@ -14,6 +14,12 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.SpaServices.Extensions" Version="3.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="3.0.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.0.0" />
   </ItemGroup>
 
   <ItemGroup>
@@ -24,9 +30,19 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="ClientApp\src\app\GardenSociety\GardenSocietyComponent.ts" />
+    <None Remove="ClientApp\src\app\GardenSociety\GardenSocietyService.ts" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\crm.classess\crm.classess.csproj" />
     <ProjectReference Include="..\crm.conttracts\crm.contrracts.csproj" />
     <ProjectReference Include="..\crm.db\crm.db.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <TypeScriptCompile Include="ClientApp\src\app\GardenSociety\GardenSocietyComponent.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\GardenSociety\GardenSocietyService.ts" />
   </ItemGroup>
 
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">

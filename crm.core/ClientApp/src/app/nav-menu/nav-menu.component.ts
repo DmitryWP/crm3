@@ -1,18 +1,33 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+
+import { MenuItem } from 'primeng/api';
 
 @Component({
-  selector: 'app-nav-menu',
-  templateUrl: './nav-menu.component.html',
-  styleUrls: ['./nav-menu.component.css']
+    selector: 'app-nav-menu',
+    templateUrl: './nav-menu.component.html',
+    styleUrls: ['./nav-menu.component.css']
 })
-export class NavMenuComponent {
-  isExpanded = false;
 
-  collapse() {
-    this.isExpanded = false;
-  }
+export class NavMenuComponent implements OnInit {
 
-  toggle() {
-    this.isExpanded = !this.isExpanded;
-  }
+    isExpanded = false;
+    private items: MenuItem[];
+
+    ngOnInit(): void {
+        this.items = [{
+            label: 'File',
+            items: [
+                { label: 'New', icon: 'pi pi-plus' },
+                { label: 'Open', icon: 'pi pi-download' }
+            ]
+        },
+        {
+            label: 'Edit',
+            items: [
+                { label: 'Undo', icon: 'pi pi-refresh' },
+                { label: 'Redo', icon: 'pi pi-repeat' }
+            ]
+        }];
+    }
 }
+

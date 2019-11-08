@@ -1,6 +1,6 @@
 {
-  "name": "crm3",
-  "version": "0.0.0",
+  "name": "asasa",
+  "version": "1.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -12,7 +12,7 @@
   },
   "private": true,
   "dependencies": {
-    "@angular/animations": "8.0.0",
+    "@angular/animations": "^8.0.0",
     "@angular/common": "8.0.0",
     "@angular/compiler": "8.0.0",
     "@angular/core": "8.0.0",
@@ -28,6 +28,8 @@
     "jquery": "3.4.1",
     "oidc-client": "^1.9.0",
     "popper.js": "^1.14.3",
+    "primeicons": "^2.0.0",
+    "primeng": "^8.1.1",
     "rxjs": "^6.4.0",
     "zone.js": "~0.9.1"
   },
