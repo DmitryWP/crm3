@@ -13,11 +13,14 @@ export class NavMenuComponent implements OnInit {
     isExpanded = false;
     private items: MenuItem[];
 
+//         <li class="nav-item"[routerLinkActive] = "['link-active']" >
+//    <a class="nav-link text-dark"[routerLink] = "['/garden-society']" > СНТ < /a>
+
     ngOnInit(): void {
         this.items = [{
             label: 'File',
             items: [
-                { label: 'New', icon: 'pi pi-plus' },
+                { label: 'New', icon: 'pi pi-plus', routerLink: "garden-society" },
                 { label: 'Open', icon: 'pi pi-download' }
             ]
         },
